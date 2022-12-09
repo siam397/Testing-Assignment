@@ -9,4 +9,6 @@
   <li>Branches Covered: 15</li>
   <li>Branches Rate: 83.38%</li>
   </ul>
-  ![SCreenshot of Code Coverage](https://user-images.githubusercontent.com/52734646/206703997-08393cbd-2e25-4cc1-ba89-ce525a174a8a.png)
+  
+<h1>Code Coverage Screenshot-</h1>
+<img src="https://user-images.githubusercontent.com/52734646/206703997-08393cbd-2e25-4cc1-ba89-ce525a174a8a.png"/>
