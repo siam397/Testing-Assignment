@@ -7,5 +7,6 @@ namespace lab_assignment_VandV.OnlineShoppingSystem
         public string? Group { get; set; }
         public string? SubGroup { get; set; }
         public int Price { get; set; }
+
     }
 }

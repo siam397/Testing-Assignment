@@ -10,8 +10,12 @@ namespace lab_assignment_VandV.OnlineShoppingSystem
         public string? PhoneNumber { get; set; }
         private CartProducts _cartProducts;
         private Products _products;
-        public Customer()
+        public Customer(string name, string address, string phoneNumber)
         {
+            Id = 23;
+            Name = name;
+            Address = address;
+            PhoneNumber = phoneNumber;
             _cartProducts = new();
             _products = new();
         }
@@ -49,6 +53,11 @@ namespace lab_assignment_VandV.OnlineShoppingSystem
         public void DeleteFromCart(string productId)
         {
             _cartProducts.Delete(productId);
+        }
+
+        public CartProducts GetCartProducts()
+        {
+            return _cartProducts;
         }
 
     }

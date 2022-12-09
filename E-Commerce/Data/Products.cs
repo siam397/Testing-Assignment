@@ -51,21 +51,26 @@ namespace lab_assignment_VandV.Data
             return _productList.Where(x => x.Id == id).FirstOrDefault();
         }
 
-        public void AddProducts(Product product)
+        public void AddProduct(Product product)
         {
             _productList.Add(product);
         }
 
-        public void UpdateProduct(string id)
+        public void UpdateProduct(string id, Product updatedProduct)
         {
-            var result = _productList.Select(product =>
+            foreach (var product in _productList)
             {
-                product.Id = id;
-                return product;
-            }).ToList();
+                if (product.Id == id)
+                {
+                    product.Name = updatedProduct.Name;
+                    product.Group = updatedProduct.Group;
+                    product.SubGroup = updatedProduct.SubGroup;
+                    product.Price = updatedProduct.Price;
+                }
+            }
         }
 
-        public void DeleteProducts(string id)
+        public void DeleteProduct(string id)
         {
             var product = _productList.FirstOrDefault(x => x.Id == id);
             if (product != null)

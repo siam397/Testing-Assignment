@@ -22,21 +22,21 @@ namespace lab_assignment_VandV.OnlineShoppingSystem
             return productNames;
         }
 
-        public bool AddProducts(Product product)
+        public Product AddProduct(Product product)
         {
-            _products.AddProducts(product);
+            _products.AddProduct(product);
+            return product;
+        }
+
+        public bool DeleteProduct(string productId)
+        {
+            _products.DeleteProduct(productId);
             return true;
         }
 
-        public bool DeleteProducts(string productId)
+        public bool ModifyProduct(string productId, Product product)
         {
-            _products.DeleteProducts(productId);
-            return true;
-        }
-
-        public bool ModifyProducts(string productId)
-        {
-            _products.UpdateProduct(productId);
+            _products.UpdateProduct(productId, product);
             return true;
         }
 
